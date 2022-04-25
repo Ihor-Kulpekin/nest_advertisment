@@ -1,0 +1,33 @@
+.info_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.text {
+  color: #151515;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+}
+
+.description_block {
+  display: flex;
+  flex-direction: column;
+}
+
+.date_text {
+  color: #8f8f8f;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}

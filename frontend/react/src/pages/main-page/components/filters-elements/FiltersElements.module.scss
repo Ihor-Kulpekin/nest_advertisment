@@ -1,0 +1,46 @@
+@import "../../../../common/styles";
+
+.filters_elements {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(90, 15, 15, 0.16);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+
+  font-size: 10px;
+
+  .text {
+    width: inherit;
+  }
+
+  .items_block {
+    display: flex;
+    align-items: center;
+
+    ._items, ._items_type_list {
+      display: flex;
+      align-items: center;
+      margin-left: 5px;
+    }
+
+    ._items {
+      justify-content: space-between;
+    }
+
+    ._item, ._choosen_item {
+      margin-right: 20px;
+    }
+
+    ._choosen_item {
+      color: black;
+      font-weight: 900;
+    }
+
+    ._items_type_list {
+      ._item:first-child {
+        margin-right: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+.modal_block {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: width 1s;
+
+  .link {
+    color: #385898 !important;
+  }
+
+  .modal_wrapper {
+    position: fixed;
+    top: 14%;
+    left: 0;
+    z-index: 1050;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+  }
+
+  .modal {
+    z-index: 100;
+    background: white;
+    position: relative;
+    margin: 1.75rem auto;
+    border-radius: 3px;
+    max-width: 500px;
+    padding-top: 2rem;
+  }
+
+  .modal_header {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .modal_close_button {
+    font-size: 3.4rem;
+    font-weight: 700;
+    line-height: 1;
+    color: gray;
+    position: absolute;
+    opacity: .3;
+    background: none !important;
+    cursor: pointer;
+    border: none;
+    right: 0;
+    top: 0;
+  }
+
+  button {
+    font-size: .9rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 3px;
+    padding: .3rem 1rem;
+    margin-left: .5rem;
+  }
+
+  .heading_container {
+    border-bottom: 1px solid gray;
+    padding: 0 0 10px 0;
+  }
+
+  .signup_text {
+    color: #1c1e21;
+    font-family: SFProDisplay-Bold, Helvetica, Arial, sans-serif;
+    font-size: 32px;
+    line-height: 38px;
+    margin: 0;
+  }
+
+  .textQuicklyAndEasy {
+    color: #606770;
+    font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    margin: 0;
+  }
+
+  .textQuicklyAndEasy, .signup_text {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 23px;
+    width: 100%;
+  }
+
+  .input, .big_input {
+    border-radius: 5px;
+    border: 1px solid #ccd0d5;
+    padding: 11px;
+    background-color: #f5f6f7;
+    margin-bottom: 20px;
+  }
+
+  .input {
+    width: 80%;
+  }
+
+  .big_input {
+    width: 100%;
+  }
+
+  .controls_wrapper {
+    padding: 2rem;
+  }
+
+  .big_input_container {
+    margin-bottom: 10px;
+  }
+
+  .textTermsAndConditionals {
+    color: #777;
+    font-size: 11px;
+  }
+}

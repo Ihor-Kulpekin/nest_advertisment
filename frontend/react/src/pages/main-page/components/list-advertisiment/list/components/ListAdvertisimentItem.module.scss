@@ -1,0 +1,31 @@
+@import "../../ItemCommon.module";
+
+.item {
+  display: flex;
+  margin-bottom: 20px;
+  width: 60%;
+  background-color: white;
+  border: 1px solid #e1e1e1;
+  border-radius: 40px;
+  padding: 20px;
+
+  .main_photo_block {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+    }
+  }
+
+  .price {
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+}

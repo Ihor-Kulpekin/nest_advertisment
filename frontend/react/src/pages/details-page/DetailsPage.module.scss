@@ -1,0 +1,50 @@
+@import "src/common/styles";
+
+.details_page {
+  background-color: white;
+  padding: 30px 0 30px 0;
+  border: 1px solid #e1e1e1;
+  margin-top: 20px;
+
+  .container {
+    margin: 0 20px 0 20px;
+  }
+
+  .name_price_block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .name_advertisiment {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 37px;
+    margin: 0 0 10px;
+  }
+
+  .price_block {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+
+  .info_block {
+    display: flex;
+    margin-bottom: 20px;
+
+    .info_item {
+      color: #000;
+      font-size: 14px;
+      margin-right: 10px;
+    }
+  }
+
+  .description {
+    margin-top: 20px;
+
+    .description_text {
+      margin-bottom: 20px;
+    }
+  }
+}

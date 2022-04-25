@@ -1,0 +1,18 @@
+.photo_gallery {
+  width: 400px;
+  display: flex;
+  justify-content: flex-start;
+
+  .carousel .thumb.selected, .carousel .thumb:hover {
+    border: none;
+  }
+
+  .carousel .control-dots {
+    display: none;
+  }
+
+  img {
+    width: 200px;
+    object-fit: scale-down;
+  }
+}
