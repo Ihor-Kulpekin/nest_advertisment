@@ -1,0 +1,35 @@
+.input_block {
+  display: flex;
+  flex-direction: column;
+  padding-right: 25px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+
+.input, .big_input {
+  border-radius: 5px;
+  border: 1px solid #ccd0d5;
+  padding: 11px;
+  background-color: #f5f6f7;
+  margin-bottom: 20px;
+}
+
+.input {
+  width: 80%;
+}
+
+.big_input {
+  width: 100%;
+}
+
+.label {
+  margin-bottom: 10px;
+}
+
+.error_text {
+  position: absolute;
+  color: red;
+  font-size: 10px;
+  top: 74px;
+}

@@ -4,6 +4,7 @@ import {Formik} from 'formik';
 
 import Button from "../../button/Button";
 import modalStyles from './ModalForm.module.scss';
+import InputComponent from "../../input/Input.component";
 
 const ModalForm = ({isShow, toggleModal, initialValues, onSubmit, error}) => isShow ? createPortal(
     <div className={modalStyles.modal_block}>
@@ -31,30 +32,35 @@ const ModalForm = ({isShow, toggleModal, initialValues, onSubmit, error}) => isS
                         return (
                             <form onSubmit={handleSubmit} className={modalStyles.controls_wrapper} noValidate>
                                 <div className={modalStyles.big_input_container}>
-                                    <input onChange={(event) => {
+                                    <InputComponent onChange={(event) => {
                                         setFieldValue('name', event.target.value)
-                                    }} type="text" className={modalStyles.big_input} placeholder="Name" value={values.name}/>
-                                    <textarea onChange={(event => setFieldValue('description', event.target.value))}
-                                              className={modalStyles.big_input} placeholder="Description"
-                                           value={values.description}/>
-                                    <input onChange={(event) => {
-                                        setFieldValue('price', event.target.value)
-                                    }} type="number" className={modalStyles.big_input} placeholder="Price" value={values.price}/>
-                                    <input onChange={(event) => {
-                                        setFieldValue('mainPhoto', event.target.value)
-                                    }} type="text" className={modalStyles.big_input} placeholder="Main Photo" value={values.mainPhoto}/>
-
-                                    <div className={modalStyles.inputs}>
-                                        <input onChange={(event) => {
-                                            setFieldValue('firstPhoto', event.target.value)
-                                        }} type="text" className={modalStyles.input} placeholder="First Photo (just input link)" value={values.firstPhoto}/>
-                                        <input onChange={(event) => {
-                                            setFieldValue('secondPhoto', event.target.value)
-                                        }} type="text" className={modalStyles.input} placeholder="Second Photo (just input link)" value={values.secondPhoto}/>
-                                        <input onChange={(event) => {
-                                            setFieldValue('thirdPhoto', event.target.value)
-                                        }} type="text" className={modalStyles.input} placeholder="Third Photo (just input link)" value={values.thirdPhoto}/>
+                                    }} type="text" placeholder="Name" label="Name" value={values.name} size="big"/>
+                                    <div>
+                                        <div style={{marginBottom: 10}}>Description</div>
+                                        <textarea onChange={(event => setFieldValue('description', event.target.value))}
+                                                  className={modalStyles.big_input} placeholder="Description"
+                                                  value={values.description}/>
                                     </div>
+                                    <InputComponent onChange={(event) => {
+                                        setFieldValue('price', event.target.value)
+                                    }} type="number" placeholder="Price" label="Price" value={values.price} size="big"/>
+                                    <InputComponent onChange={(event) => {
+                                        setFieldValue('mainPhoto', event.target.value)
+                                    }} type="text" placeholder="Main Photo" label="Main Photo" value={values.mainPhoto} size="big"/>
+
+
+                                    <InputComponent onChange={(event) => {
+                                        setFieldValue('firstPhoto', event.target.value)
+                                    }} type="text" label="First Photo" placeholder="First Photo (just input link)" value={values.firstPhoto} size="small"/>
+
+                                    <InputComponent onChange={(event) => {
+                                        setFieldValue('secondPhoto', event.target.value)
+                                    }} type="text" label="Second Photo" placeholder="Second Photo (just input link)" value={values.secondPhoto} size="small"/>
+
+                                    <InputComponent onChange={(event) => {
+                                        setFieldValue('thirdPhoto', event.target.value)
+                                    }} type="text" label="Third Photo" placeholder="Third Photo (just input link)" value={values.thirdPhoto} size="small"/>
+
                                 </div>
                                 <Button text="Create Account" type="submit" />
                             </form>

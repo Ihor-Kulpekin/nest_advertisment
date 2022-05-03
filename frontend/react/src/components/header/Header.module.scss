@@ -32,3 +32,20 @@
     background-color: rgba(248, 227, 2, 0.85);
   }
 }
+
+.container_profile {
+  display: flex;
+  align-items: center;
+
+  .my_profile_text {
+    color: white;
+    &:hover {
+      color: rgba(255, 255, 255, 0.42);
+    }
+  }
+
+  .menu_block {
+    position: relative;
+    margin-right: 20px;
+  }
+}

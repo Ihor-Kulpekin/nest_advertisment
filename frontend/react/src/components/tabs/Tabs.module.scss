@@ -1,0 +1,9 @@
+@import "src/common/styles";
+
+.tabs {
+  display: flex;
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: $border;
+}

@@ -11,8 +11,9 @@
     text-transform: uppercase;
     font-weight: bold;
 
-    :hover {
+    &:hover {
       background-color: rgba(24, 119, 242, 0.82);
+      cursor: pointer;
     }
   }
 }

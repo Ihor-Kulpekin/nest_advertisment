@@ -6,7 +6,7 @@ const CreateAdvertisimentModal = ({isShow, toggleModal, createAdvertisiment, err
     onSubmit={createAdvertisiment}
     isShow={isShow} error={error}
     toggleModal={toggleModal}
-    initialValues={{name: '', description: '', price: 0, mainPhoto: '', firstPhoto: '', secondPhoto: '', thirdPhoto: ''}}/>
+    initialValues={{name: '', description: '', price: '', mainPhoto: '', firstPhoto: '', secondPhoto: '', thirdPhoto: ''}}/>
 }
 
 export default CreateAdvertisimentModal;

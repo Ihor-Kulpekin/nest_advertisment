@@ -1,0 +1,36 @@
+$widthAlert: 300px;
+$backgroundColorFailed: red;
+$backgroundColorSuccessfuly: #20cd20;
+$textColor: white;
+
+.alert {
+  position: absolute;
+  visibility: hidden;
+  top: 120px;
+  width: $widthAlert;
+  height: 60px;
+  font-weight: 700;
+  border-radius: 4px;
+  color: $textColor;
+  right: 0;
+  transition: visibility 0.25s ease-in-out;
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.alert.visible {
+  visibility: visible;;
+}
+
+.failed {
+  background-color: $backgroundColorFailed;
+}
+
+.successfuly {
+  background-color: $backgroundColorSuccessfuly;
+}

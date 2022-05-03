@@ -8,13 +8,7 @@ export const getAdvertisiment = async (id) => {
 }
 
 export const getAdvertisiments = async (payload) => {
-  const filters = {
-    name: payload.name
-  };
-
-  delete payload.name
-
-  const query = `filters=${JSON.stringify(filters)}&sort=${payload.sort}&skip=${payload.skip}&rows=${payload.rows}&limit=${payload.limit}`;
+  const query = `filters=${JSON.stringify(payload.filters)}&sort=${payload.sort}&skip=${payload.skip}&rows=${payload.rows}&limit=${payload.limit}`;
 
   const response = await axios.get(`${apiUrl}/advertisement?${query}`, {
     method: 'GET'

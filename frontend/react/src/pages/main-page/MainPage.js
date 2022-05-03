@@ -10,6 +10,9 @@ import {
 } from "../../actions/advertisiment.action";
 import LoadingProgressComponent from "../../components/loading-progress/LoadingProgress.component";
 import ListAdvertisimentWrapperComponent from "./components/list-advertisiment/ListAdvertisimentWrapper.component";
+import withAdvertisiments from "../../hoc/withAdvertisiments";
+
+// const MainPageWithAdvertisiments
 
 const MainPage = () => {
   const dispatch = useDispatch();
@@ -22,7 +25,7 @@ const MainPage = () => {
 
   const fetchAdvertisiment = () => {
     dispatch(getAdvertisimentsActionRequest({
-      name: {'$regex': value, '$options': 'i'},
+      filters: {name: {'$regex': value, '$options': 'i'}},
       sort,
       limit: rows,
       rows,

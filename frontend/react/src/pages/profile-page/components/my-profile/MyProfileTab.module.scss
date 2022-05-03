@@ -1,0 +1,35 @@
+@import "src/common/styles";
+
+.my_profile_tab {
+  background-color: white;
+  padding: 15px;
+  border: $border;
+
+  .profiles_data {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profiles_data_item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .label {
+      color: #151515;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      width: 10%;
+    }
+  }
+
+  .input_profile {
+    border: $border;
+    background-color: #fff;
+    background-image: none;
+    width: 40%;
+    border-radius: 4px;
+    padding: 10px 18px;
+  }
+}

@@ -5,8 +5,9 @@
   padding: 0;
 }
 
-a, a:link {
+a, a:link, a:focus {
   text-decoration: none;
+  color: inherit;
 }
 
 html {

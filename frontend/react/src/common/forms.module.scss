@@ -1,0 +1,19 @@
+.input_block {
+  display: flex;
+  flex-direction: column;
+  padding-right: 25px;
+  position: relative;
+  margin-bottom: 20px;
+
+  .error_text {
+    position: absolute;
+    color: red;
+    font-size: 10px;
+    top: 74px;
+  }
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}

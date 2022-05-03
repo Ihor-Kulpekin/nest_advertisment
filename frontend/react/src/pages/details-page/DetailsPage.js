@@ -20,7 +20,7 @@ const DetailsPage = () => {
     }
   }
 
-  useEffect(getAdvertisiment, [])
+  useEffect(getAdvertisiment, [id])
 
   return (
     <div className={`${detailsPageStyles.wrapper} ${detailsPageStyles.details_page}`}>

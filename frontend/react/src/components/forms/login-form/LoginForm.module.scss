@@ -1,0 +1,30 @@
+.login_form {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  flex-direction: column;
+  align-content: center;
+  background-color: white;
+  padding: 30px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.controlls_elements_block {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contolls_element {
+  color: #4182d7;
+
+  &:hover {
+    color: rgba(65, 130, 215, 0.56);
+    cursor: pointer;
+  }
+}
+
+

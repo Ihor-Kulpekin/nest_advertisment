@@ -10,6 +10,30 @@
   font-display: block;
 }
 
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/profile.eot?5y8zb');
+  src:  url('fonts/profile.eot?5y8zb#iefix') format('embedded-opentype'),
+  url('fonts/profile.ttf?5y8zb') format('truetype'),
+  url('fonts/profile.woff?5y8zb') format('woff'),
+  url('fonts/profile.svg?5y8zb#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/bullhorn.eot?sogb4h');
+  src:  url('fonts/bullhorn.eot?sogb4h#iefix') format('embedded-opentype'),
+  url('fonts/bullhorn.ttf?sogb4h') format('truetype'),
+  url('fonts/bullhorn.woff?sogb4h') format('woff'),
+  url('fonts/bullhorn.svg?sogb4h#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
@@ -28,4 +52,12 @@
 
 .icon-search:before {
   content: "\e986";
+}
+
+.icon-user:before {
+  content: "\e971";
+}
+
+.icon-bullhorn:before {
+  content: "\e91a";
 }

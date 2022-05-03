@@ -1,0 +1,28 @@
+@import "src/common/styles";
+
+.profile_page {
+  margin-top: 20px;
+
+  .title, .what_you_can_do_text {
+    font-weight: 400;
+  }
+
+  .title {
+    font-size: 24px;
+    line-height: 28px;
+    color: #000;
+    margin-bottom: 10px;
+  }
+
+  .what_you_can_do_text {
+    color: #8f8f8f;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .heading_block {
+    border-bottom: solid 1px #e1e1e1;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+}

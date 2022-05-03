@@ -1,0 +1,26 @@
+.tab {
+  position: relative;
+  cursor: default;
+  line-height: 18px;
+  color: #8f8f8f;
+  margin-right: 20px;
+
+  &:hover {
+    color: #08c;
+  }
+
+  &.active {
+    color: #000;
+  }
+
+  .active_tab {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background: #4182d7;
+    top: 27px;
+    left: 0;
+    bottom: 0;
+  }
+}
