@@ -7,60 +7,69 @@ import {
   updateAdvertisimentRequest
 } from "../actions/advertisiment.action";
 
-const withAdvertisiments = (Component) => {
-  const dispatch = useDispatch();
-  const { loading, advertisiments, page, listType } = useSelector((state) => state.advertisiment)
-  const [sort, setSorting] = useState('price:desc');
-  const rows = useMemo(() => {
-    return 10;
-  }, [])
+const withAdvertisiments = (Component, typePage) => () => {
+    const dispatch = useDispatch();
+    const { loading, advertisiments, page, listType } = useSelector((state) => state.advertisiment)
+    const { user } = useSelector((state) => state.user)
 
-  const fetchAdvertisiment = () => {
-    dispatch(getAdvertisimentsActionRequest({
-      filters: {name: {'$regex': value, '$options': 'i'}},
-      sort,
-      limit: rows,
-      rows,
-      page,
-      skip: rows * (page - 1)
-    }))
-  }
+    const [value, setValue] = useState('');
+    const [sort, setSorting] = useState('price:desc');
+    const rows = useMemo(() => {
+      return 10;
+    }, [])
 
-  const applySorting = (value) => {
-    setSorting(value)
-  }
+    const fetchAdvertisiment = () => {
+      const filters = typePage === 'mainPage' ? {name: {'$regex': value, '$options': 'i'}} : { userId: user._id };
+      dispatch(getAdvertisimentsActionRequest({
+        filters,
+        sort,
+        limit: rows,
+        rows,
+        page,
+        skip: rows * (page - 1)
+      }))
+    }
 
-  const setTypeList = (value) => {
-    dispatch(setListType(value));
-  }
+    const onChange = (event) => {
+      setValue(event.target.value)
+    }
 
-  const changePage = (selectedPage) => {
-    dispatch(setPage(selectedPage))
-  }
+    const applySorting = (value) => {
+      setSorting(value)
+    }
 
-  const setViews = (id, item) => {
-    dispatch(updateAdvertisimentRequest({
-      id,
-      newValues: {
-        views: item.views ? item.views + 1 : 1
-      }
-    }))
-  }
+    const setTypeList = (value) => {
+      dispatch(setListType(value));
+    }
 
-  useEffect(fetchAdvertisiment, [sort, value, page]);
+    const changePage = (selectedPage) => {
+      dispatch(setPage(selectedPage))
+    }
 
-  return (
-    <Component
+    const setViews = (id, item) => {
+      dispatch(updateAdvertisimentRequest({
+        id,
+        newValues: {
+          views: item.views ? item.views + 1 : 1
+        }
+      }))
+    }
+
+    useEffect(fetchAdvertisiment, [sort, value, page]);
+
+    return <Component
       loading={loading}
       advertisiments={advertisiments}
       page={page}
+      rows={rows}
       listType={listType}
       applySorting={applySorting}
       setTypeList={setTypeList}
       changePage={changePage}
       setViews={setViews}
+      onChange={onChange}
+      value={value}
     />
-  );
 };
 
 export default withAdvertisiments;
